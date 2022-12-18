@@ -52,7 +52,7 @@ public class ValueCalculator {
         System.arraycopy(array2, 0, array, array1.length, array2.length);
         System.out.println(Arrays.toString(array));
         System.out.print("Execution time: ");
-        System.out.println((double)(System.currentTimeMillis() / 1000) % 60);
+        System.out.println((double) (start / 1000) % 60);
 
     }
 }
