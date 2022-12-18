@@ -3,7 +3,7 @@ package homework;
 import java.util.Arrays;
 
 public class ValueCalculator {
-    private final static int lenght = 10;
+    private final static int lenght = 1000000;
     private static final int[] array = new int[lenght];
 
     public static void main(String[] args) {
@@ -11,6 +11,7 @@ public class ValueCalculator {
     }
 
     public static void doCalc() {
+        long start = System.currentTimeMillis();
         for (int i = 0; i < array.length; i++) {
             array[i] = 36;
         }
@@ -18,7 +19,6 @@ public class ValueCalculator {
 
         int[] array1 = new int[lenght / 2];
         int[] array2 = new int[lenght / 2];
-        long start = System.currentTimeMillis();
 
         System.arraycopy(array, 0, array1, 0, array1.length);
         System.arraycopy(array, array1.length, array2, 0, array2.length);
@@ -52,7 +52,7 @@ public class ValueCalculator {
         System.arraycopy(array2, 0, array, array1.length, array2.length);
         System.out.println(Arrays.toString(array));
         System.out.print("Execution time: ");
-        System.out.println(System.currentTimeMillis() - start + " sec");
+        System.out.println((double)(System.currentTimeMillis() / 1000) % 60);
 
     }
 }
